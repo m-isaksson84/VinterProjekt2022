@@ -1,0 +1,15 @@
+D:\Programmering\VinterProjekt2022\VinterProjekt2022\bin\Debug\net6.0\VinterProjekt2022.exe
+D:\Programmering\VinterProjekt2022\VinterProjekt2022\bin\Debug\net6.0\VinterProjekt2022.deps.json
+D:\Programmering\VinterProjekt2022\VinterProjekt2022\bin\Debug\net6.0\VinterProjekt2022.runtimeconfig.json
+D:\Programmering\VinterProjekt2022\VinterProjekt2022\bin\Debug\net6.0\VinterProjekt2022.dll
+D:\Programmering\VinterProjekt2022\VinterProjekt2022\bin\Debug\net6.0\ref\VinterProjekt2022.dll
+D:\Programmering\VinterProjekt2022\VinterProjekt2022\bin\Debug\net6.0\VinterProjekt2022.pdb
+D:\Programmering\VinterProjekt2022\VinterProjekt2022\obj\Debug\net6.0\VinterProjekt2022.csproj.AssemblyReference.cache
+D:\Programmering\VinterProjekt2022\VinterProjekt2022\obj\Debug\net6.0\VinterProjekt2022.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programmering\VinterProjekt2022\VinterProjekt2022\obj\Debug\net6.0\VinterProjekt2022.AssemblyInfoInputs.cache
+D:\Programmering\VinterProjekt2022\VinterProjekt2022\obj\Debug\net6.0\VinterProjekt2022.AssemblyInfo.cs
+D:\Programmering\VinterProjekt2022\VinterProjekt2022\obj\Debug\net6.0\VinterProjekt2022.csproj.CoreCompileInputs.cache
+D:\Programmering\VinterProjekt2022\VinterProjekt2022\obj\Debug\net6.0\VinterProjekt2022.dll
+D:\Programmering\VinterProjekt2022\VinterProjekt2022\obj\Debug\net6.0\ref\VinterProjekt2022.dll
+D:\Programmering\VinterProjekt2022\VinterProjekt2022\obj\Debug\net6.0\VinterProjekt2022.pdb
+D:\Programmering\VinterProjekt2022\VinterProjekt2022\obj\Debug\net6.0\VinterProjekt2022.genruntimeconfig.cache
