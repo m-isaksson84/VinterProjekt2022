@@ -15,22 +15,5 @@ namespace VinterProjekt2022
         //{ 
         //    return boredom;
         //} 
-
-        public void Teach(string word)
-        {
-            Console.WriteLine("Hej!");
-        }
-
-        public void Hi()
-        {
-            Console.WriteLine("Hej!");
-            ReduceBoredom();
-        }
-
-        public void ReduceBoredom()
-        {
-            boredom = boredom - 5;
-            boredom = Math.Max(boredom, 0);
-        }
     }
 }
