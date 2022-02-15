@@ -7,37 +7,10 @@ namespace VinterProjekt2022
     {
         static void Main(string[] args)
         {
-            Companion companion = new Companion();
-
-            //prova konvertera text till void-metoder i separat klass?
-            System.Console.WriteLine("Choose a taxonomic genus:");
-            Console.WriteLine("(Make sure to only answer with the numbers 1-4)");
-            System.Console.WriteLine("1: Panthera");
-            System.Console.WriteLine("2: Felis");
-            System.Console.WriteLine("3: Gorilla");
-            System.Console.WriteLine("4: Homo");
-            
-            string PlayerChoice1 = Console.ReadLine();
-            
-            if (PlayerChoice1 == "1") 
-            {
-                    System.Console.WriteLine("Select a species:");
-                    Console.WriteLine("(Make sure to only answer with the numbers 1-4)");
-                    System.Console.WriteLine("1: Lion");
-                    System.Console.WriteLine("2: Panther");
-                    System.Console.WriteLine("3: Tiger");
-            }
-
-            if (PlayerChoice1 == "2") 
-            {
-                System.Console.WriteLine("Select a species:");
-                Console.WriteLine("(Make sure to only answer with the numbers 1-4)");
-                System.Console.WriteLine("1: Cat");
-                System.Console.WriteLine("2: Ocelot");
-                System.Console.WriteLine("3: Lynx");
-            }
-            
-            string PlayerChoice = Console.ReadLine();
+            // to do: gör prompt klass som returnerar ett värde som blir avläst i main och ändrar instansen för companion i main
+            Setup Setup = new Setup();
+            Companion Companion = new Companion();
+            bool nameSelect = false;
             /*
             Dessa if-satser ser till att companion tillämpar de egenskaper som de olika djuren/companions har.
             Inledningsvis anropas en tom companion-instans så koden i while-loopen fungerar från början och.. 
@@ -45,36 +18,89 @@ namespace VinterProjekt2022
             */
             //string PlayerChoice = Console.ReadLine();
 
-            if (PlayerChoice == "1") {
+            // to do: gör prompt klass som returnerar ett värde som blir avläst i main och ändrar instansen för companion i main
+
+            if (Setup.globalGenusChoice == 1) {
+                // ändrar companion till att tillämpa alla arv från PantheraChar
+                Companion = new PantheraChar();
+            }
+
+            if (Setup.globalGenusChoice == 2) {
+                // ändrar companion till att tillämpa alla arv från FelisChar
+                Companion = new FelisChar();
+            }
+
+            if (Setup.globalFinalChoice == 1) {
                 // ändrar companion till att tillämpa alla arv från LionChar
-                companion = new LionChar();
+                Companion = new LionChar();
+                nameSelect = true;
             }
 
-            if (PlayerChoice == "2") {
+            if (Setup.globalFinalChoice == 2) {
+                // ändrar companion till att tillämpa alla arv från PantherChar
+                Companion = new PantherChar();
+                nameSelect = true;
+            }
+
+            if (Setup.globalFinalChoice == 3) {
                 // ändrar companion till att tillämpa alla arv från CatChar
-                companion = new CatChar();
+                Companion = new CatChar();
+                nameSelect = true;
             }
 
-            while (companion.GetAlive() == "1")
+            while (nameSelect == true)
             {
-                //requirements.PrintStats();
-                companion.PrintCurrentStats();
-                Console.WriteLine($"Actions {companion.name}");
-                //Tick();
-                Console.WriteLine("1: Ge mat");
-                Console.WriteLine("2: Lär ord");
-                Console.WriteLine("3: Lista på lärda ord");
+                Console.WriteLine("Choose a name for your companion");
+                Companion.name = Console.ReadLine();
+                nameSelect = false;
+            }
+
+            while (Companion.GetAlive())
+            {
+                Companion.CompanionType();
+                Companion.CompanionSpecies();
+                Companion.PrintStats();
+                Console.WriteLine("");
+                Companion.PrintCurrentStats();
+                Console.WriteLine("");
+                Console.WriteLine($"Actions {Companion.name}");
+                Console.WriteLine("");
+                Console.WriteLine($"1: Feed {Companion.name}");
+                Console.WriteLine($"2: Greet {Companion.name}");
+                Console.WriteLine($"3: Teach {Companion.name}");
+                Console.WriteLine($"4: {Companion.name} Learned words");
                 string action = Console.ReadLine();
                 Console.Clear();
 
                 if (action == "1")
                 {
-                    companion.Tick();
+                    Companion.Feed();
+                    //companion.Tick();
                     Console.Clear();
                     //Feed();
                 }
 
-                
+                if (action == "2")
+                {
+                    Companion.Hi();
+                    //Companion.ListWords();
+                }
+
+                if (action == "3")
+                {
+                    Console.WriteLine("unfinished");
+                }
+
+                if (action == "4")
+                {
+                    Console.WriteLine("unfinished");
+                }
+
+                if (action == "5")
+                {
+                    Companion.Tick();
+                    Console.Clear();
+                }
             }
         }
     }
