@@ -9,6 +9,7 @@ namespace VinterProjekt2022
         public string type;
         public string species;
 
+        // dessa 2 globala properties existerar för att jag ska kunna använda dem som variabler utanför denna klass
         public int globalBoredom 
         {
             get
@@ -35,7 +36,6 @@ namespace VinterProjekt2022
 
         // namnet är placeholder som ändras när spelaren specificerar vilken companion de ska ha
         public string name = "DefaultCompanion";
-        private List<string> words = new List<string>();
 
         public void PrintCurrentStats()
         {
@@ -55,7 +55,7 @@ namespace VinterProjekt2022
                 hunger = 0;
             }
         }
-
+        
         public virtual void Feed()
         {}
 

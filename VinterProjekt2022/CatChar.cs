@@ -10,8 +10,7 @@ namespace VinterProjekt2022
         public string species;
         public CatChar()
         {
-            // overridar hunger stats från Companion
-            // gör om till inkapslad SetHunger metod
+            // Overridar hunger stats från Companion
             globalHunger = 25;
             globalBoredom = 0;
             name = "Temp_Name_Cat";

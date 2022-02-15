@@ -7,26 +7,21 @@ namespace VinterProjekt2022
     {
         public PantherChar()
         {
-            // overridar hunger stats från Companion
-            // gör om till inkapslad SetHunger metod
+            // Overridar hunger stats från Companion
             globalHunger = 25;
             globalBoredom = 0;
             name = "Temp_Name_Panther";
-            //SetBoredom(10);
         }
 
         // Använder override då den tar Tick() metoden från Companion som template och 
         // overridar den med nya "regler" för variablerna när metoden körs.
         public override void Tick()
         {   
-            //boredom++;
             globalBoredom++;
-            //hunger -= 3;
             globalHunger -= 3;
 
             if (globalHunger < 0) 
             {   
-                //hunger = 0;
                 globalHunger = 0;
             }
         }
